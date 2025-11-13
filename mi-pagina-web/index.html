@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web - Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h2>MiSitio</h2>
+            </div>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio" data-lang-es="Inicio" data-lang-en="Home">Inicio</a></li>
+                <li><a href="#servicios" data-lang-es="Servicios" data-lang-en="Services">Servicios</a></li>
+                <li><a href="#proyectos" data-lang-es="Proyectos" data-lang-en="Projects">Proyectos</a></li>
+                <li><a href="#about" data-lang-es="Acerca de" data-lang-en="About">Acerca de</a></li>
+                <li><a href="#contacto" data-lang-es="Contacto" data-lang-en="Contact">Contacto</a></li>
+            </ul>
+            <div class="navbar-controls">
+                <!-- Toggle de modo oscuro/claro -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+
+                <!-- Dropdown de idiomas con banderas -->
+                <div class="language-switcher">
+                    <button class="lang-dropdown-toggle" id="langDropdownToggle" aria-label="Select language">
+                        <span class="flag" id="currentFlag">🇪🇸</span>
+                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown-menu" id="langDropdownMenu">
+                        <button class="lang-option active" data-lang="es" data-flag="🇪🇸">
+                            <span class="flag">🇪🇸</span>
+                            <span class="lang-name" data-lang-es="Español" data-lang-en="Spanish">Español</span>
+                        </button>
+                        <button class="lang-option" data-lang="en" data-flag="🇺🇸">
+                            <span class="flag">🇺🇸</span>
+                            <span class="lang-name" data-lang-es="Inglés" data-lang-en="English">Inglés</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="video-background">
+                <video autoplay muted loop playsinline>
+                    <source src="video.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 data-lang-es="Bienvenido a Mi Página Web" data-lang-en="Welcome to My Website">Bienvenido a Mi Página Web</h1>
+                <p data-lang-es="Creando experiencias digitales increíbles" data-lang-en="Creating amazing digital experiences">Creando experiencias digitales increíbles</p>
+                <button class="btn-primary" onclick="mostrarMensaje()" data-lang-es="Comenzar" data-lang-en="Get Started">Comenzar</button>
+            </div>
+        </section>
+
+        <section id="servicios" class="servicios">
+            <h2 data-lang-es="Nuestros Servicios" data-lang-en="Our Services">Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <h3 data-lang-es="Diseño Web" data-lang-en="Web Design">Diseño Web</h3>
+                    <p data-lang-es="Creamos sitios web modernos y responsive que se adaptan a cualquier dispositivo." data-lang-en="We create modern and responsive websites that adapt to any device.">Creamos sitios web modernos y responsive que se adaptan a cualquier dispositivo.</p>
+                </div>
+                <div class="servicio-card">
+                    <h3 data-lang-es="Desarrollo" data-lang-en="Development">Desarrollo</h3>
+                    <p data-lang-es="Desarrollamos aplicaciones web robustas y escalables con las últimas tecnologías." data-lang-en="We develop robust and scalable web applications with the latest technologies.">Desarrollamos aplicaciones web robustas y escalables con las últimas tecnologías.</p>
+                </div>
+                <div class="servicio-card">
+                    <h3 data-lang-es="Consultoría" data-lang-en="Consulting">Consultoría</h3>
+                    <p data-lang-es="Te asesoramos en la estrategia digital perfecta para tu negocio." data-lang-en="We advise you on the perfect digital strategy for your business.">Te asesoramos en la estrategia digital perfecta para tu negocio.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="proyectos">
+            <h2 data-lang-es="Mis Proyectos" data-lang-en="My Projects">Mis Proyectos</h2>
+            <div class="proyectos-grid">
+                <div class="proyecto-card">
+                    <div class="proyecto-imagen">
+                        <img src="https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80" alt="Proyecto 1">
+                        <div class="proyecto-overlay">
+                            <a href="#" class="proyecto-link" target="_blank" data-lang-es="Ver Proyecto" data-lang-en="View Project">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3 data-lang-es="E-Commerce Moderno" data-lang-en="Modern E-Commerce">E-Commerce Moderno</h3>
+                        <p data-lang-es="Tienda en línea con sistema de pagos integrado y gestión de inventario." data-lang-en="Online store with integrated payment system and inventory management.">Tienda en línea con sistema de pagos integrado y gestión de inventario.</p>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <div class="proyecto-imagen">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Proyecto 2">
+                        <div class="proyecto-overlay">
+                            <a href="#" class="proyecto-link" target="_blank" data-lang-es="Ver Proyecto" data-lang-en="View Project">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3 data-lang-es="App de Gestión" data-lang-en="Management App">App de Gestión</h3>
+                        <p data-lang-es="Aplicación web para gestión de proyectos y equipos de trabajo." data-lang-en="Web application for project and team management.">Aplicación web para gestión de proyectos y equipos de trabajo.</p>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <div class="proyecto-imagen">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&q=80" alt="Proyecto 3">
+                        <div class="proyecto-overlay">
+                            <a href="#" class="proyecto-link" target="_blank" data-lang-es="Ver Proyecto" data-lang-en="View Project">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3 data-lang-es="Portfolio Creativo" data-lang-en="Creative Portfolio">Portfolio Creativo</h3>
+                        <p data-lang-es="Sitio web portfolio con animaciones y diseño minimalista." data-lang-en="Portfolio website with animations and minimalist design.">Sitio web portfolio con animaciones y diseño minimalista.</p>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <div class="proyecto-imagen">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Proyecto 4">
+                        <div class="proyecto-overlay">
+                            <a href="#" class="proyecto-link" target="_blank" data-lang-es="Ver Proyecto" data-lang-en="View Project">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3 data-lang-es="Dashboard Analytics" data-lang-en="Analytics Dashboard">Dashboard Analytics</h3>
+                        <p data-lang-es="Panel de control con gráficos interactivos y análisis de datos en tiempo real." data-lang-en="Control panel with interactive charts and real-time data analysis.">Panel de control con gráficos interactivos y análisis de datos en tiempo real.</p>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <div class="proyecto-imagen">
+                        <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=800&q=80" alt="Proyecto 5">
+                        <div class="proyecto-overlay">
+                            <a href="#" class="proyecto-link" target="_blank" data-lang-es="Ver Proyecto" data-lang-en="View Project">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3 data-lang-es="Blog Personal" data-lang-en="Personal Blog">Blog Personal</h3>
+                        <p data-lang-es="Plataforma de blog con sistema CMS y optimización SEO." data-lang-en="Blog platform with CMS system and SEO optimization.">Plataforma de blog con sistema CMS y optimización SEO.</p>
+                    </div>
+                </div>
+
+                <div class="proyecto-card">
+                    <div class="proyecto-imagen">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&q=80" alt="Proyecto 6">
+                        <div class="proyecto-overlay">
+                            <a href="#" class="proyecto-link" target="_blank" data-lang-es="Ver Proyecto" data-lang-en="View Project">Ver Proyecto</a>
+                        </div>
+                    </div>
+                    <div class="proyecto-info">
+                        <h3 data-lang-es="Red Social" data-lang-en="Social Network">Red Social</h3>
+                        <p data-lang-es="Plataforma social con chat en tiempo real y sistema de publicaciones." data-lang-en="Social platform with real-time chat and posting system.">Plataforma social con chat en tiempo real y sistema de publicaciones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 data-lang-es="Acerca de Nosotros" data-lang-en="About Us">Acerca de Nosotros</h2>
+            <div class="about-content">
+                <p data-lang-es="Somos un equipo apasionado por la tecnología y el diseño. Nuestro objetivo es crear soluciones web que impulsen tu negocio al siguiente nivel." data-lang-en="We are a team passionate about technology and design. Our goal is to create web solutions that take your business to the next level.">Somos un equipo apasionado por la tecnología y el diseño. Nuestro objetivo es crear soluciones web que impulsen tu negocio al siguiente nivel.</p>
+                <p data-lang-es="Con años de experiencia en la industria, hemos ayudado a decenas de clientes a alcanzar sus metas digitales." data-lang-en="With years of experience in the industry, we have helped dozens of clients achieve their digital goals.">Con años de experiencia en la industria, hemos ayudado a decenas de clientes a alcanzar sus metas digitales.</p>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2 data-lang-es="Contáctanos" data-lang-en="Contact Us">Contáctanos</h2>
+            <form class="contacto-form">
+                <input type="text" placeholder="Nombre" data-lang-es-placeholder="Nombre" data-lang-en-placeholder="Name" required>
+                <input type="email" placeholder="Email" data-lang-es-placeholder="Email" data-lang-en-placeholder="Email" required>
+                <textarea placeholder="Mensaje" data-lang-es-placeholder="Mensaje" data-lang-en-placeholder="Message" rows="5" required></textarea>
+                <button type="submit" class="btn-primary" data-lang-es="Enviar Mensaje" data-lang-en="Send Message">Enviar Mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p data-lang-es="© 2025 MiSitio. Todos los derechos reservados." data-lang-en="© 2025 MySite. All rights reserved.">© 2025 MiSitio. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

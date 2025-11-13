@@ -1,0 +1,15 @@
+  # Ignorar todo lo que esté fuera del directorio del proyecto
+  ../*
+  !../mi-pagina-web/
+
+  # Archivos del sistema
+  .DS_Store
+  Thumbs.db
+
+  # Configuración de IDEs
+  .vscode/
+  .idea/
+
+  # Archivos temporales
+  *.tmp
+  *.log
